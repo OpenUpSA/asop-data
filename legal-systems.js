@@ -454,7 +454,7 @@ $(document).ready(function () {
 				let enforcementItem = $lawsItem.clone();
 
 				enforcementItem.removeClass('hidden_item');
-				if(agencyfields.Link != undefined){
+				if(agency.fields.Link != undefined){
 					enforcementItem.find('a.is--hover-red').attr('href', agency.fields.Link.text);
 				}
 				enforcementItem.find('h2').text(agency.fields.Agency);
