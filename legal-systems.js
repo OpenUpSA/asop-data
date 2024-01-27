@@ -416,7 +416,9 @@ $(document).ready(function () {
 				let lawsItem = $lawsItem.clone();
 
 				lawsItem.removeClass('hidden_item');
-				lawsItem.find('a.is--hover-red').attr('href', law.fields.Link.text);
+				if(law.fields.Link != undefined){
+					lawsItem.find('a.is--hover-red').attr('href', law.fields.Link.text);
+				}
 				lawsItem.find('h2').text(law.fields.Legislation);
 				if (law.fields.Description != '' && law.fields.Description != undefined && law.fields.Description != null) {
 					lawsItem.find('.laws-description').text(law.fields.Description);
