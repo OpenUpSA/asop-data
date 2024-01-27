@@ -340,6 +340,20 @@ function resetPageNum() {
 
 $(document).ready(() => {
 
+	// add script to page
+	let script = document.createElement('script');
+	script.src = 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js';
+	script.type = 'text/javascript';
+	document.getElementsByTagName('head')[0].appendChild(script);
+
+	
+
+	// add css to page
+	let css = document.createElement('link');
+	css.href = 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css';
+	css.rel = 'stylesheet';
+	document.getElementsByTagName('head')[0].appendChild(css);
+
 	fetchRelations();
 
 	fetchRecords();
