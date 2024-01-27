@@ -501,6 +501,109 @@ function resetPageNum() {
 }
 
 $(document).ready(() => {
+
+	// add script to page
+	let script = document.createElement('script');
+	script.src = 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js';
+	script.type = 'text/javascript';
+	document.getElementsByTagName('head')[0].appendChild(script);
+
+	// add script to page
+	script = document.createElement('script');
+	script.src = 'https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js';
+	script.type = 'text/javascript';
+	document.getElementsByTagName('head')[0].appendChild(script);
+
+	// add css to page
+	let css = document.createElement('link');
+	css.href = 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css';
+	css.rel = 'stylesheet';
+	document.getElementsByTagName('head')[0].appendChild(css);
+
+	// add css to page
+	css = document.createElement('link');
+	css.href = 'https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css';
+	css.rel = 'stylesheet';
+	document.getElementsByTagName('head')[0].appendChild(css);
+
+	let style = document.createElement('style');
+	style.innerHTML = `
+
+		.acc_year.accordion__content {
+			overflow: unset;
+		}
+
+		.acc_year .year_range {
+			text-align: center;
+		}
+
+		#slider .noUi-connect {
+			height: 8px;
+			background: #666;
+	  	}
+
+		#slider .noUi-base {
+			height: 8px;
+		}
+
+		.noUi-target {
+			height: 8px;
+		}
+	  
+	  	.noUi-horizontal .noUi-handle {
+			width: 20px !important; 
+			height: 20px !important;
+	  	}
+
+		.noUi-touch-area, .noUi-handle:after, .noUi-handle:before {
+			display: none;
+		}
+  
+  		.acc_item.hidden .acc_content_wrapper {
+			display: none;
+		}
+
+		.acc_content_wrapper {
+			padding-left: 0.5em; 
+			padding-right: 0.5em;
+		}
+
+		.research-subject, .research-category, .research-country {
+			position: relative;
+		}
+
+		.research-subject:hover .more-items,
+		.research-category:hover .more-items,
+		.research-country:hover .more-items {
+			display: block;
+		}
+
+		.research-subject .more-items,
+		.research-category .more-items,
+		.research-country .more-items
+		 {
+			display: none;
+			position: absolute;
+			top: 1em;
+			left: 1em;
+			background: #fff;
+			border-radius: 5px;
+			color: #333;
+			font-size: 12px;
+			padding: 10px;
+			z-index: 999;
+
+		}
+
+  		
+  
+  		`;
+
+
+
+
+
+	document.getElementsByTagName('head')[0].appendChild(style);
 	
 
 	fetchRelations();
