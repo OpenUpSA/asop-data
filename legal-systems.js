@@ -435,7 +435,9 @@ $(document).ready(function () {
 				let lawsItem = $lawsItem.clone();
 
 				lawsItem.removeClass('hidden_item');
-				lawsItem.find('a.is--hover-red').attr('href', agreement.fields.Link.text);
+				if(agreement.fields.Link != undefined){
+					lawsItem.find('a.is--hover-red').attr('href', agreement.fields.Link.text);
+				}
 				lawsItem.find('h2').text(agreement.fields.Agreement);
 				if (agreement.fields.Description != '' && agreement.fields.Description != undefined && agreement.fields.Description != null) {
 					lawsItem.find('.laws-description').text(agreement.fields.Description);
@@ -452,7 +454,9 @@ $(document).ready(function () {
 				let enforcementItem = $lawsItem.clone();
 
 				enforcementItem.removeClass('hidden_item');
-				enforcementItem.find('a.is--hover-red').attr('href', agency.fields.Link.text);
+				if(agencyfields.Link != undefined){
+					enforcementItem.find('a.is--hover-red').attr('href', agency.fields.Link.text);
+				}
 				enforcementItem.find('h2').text(agency.fields.Agency);
 				if (agency.fields.Description != '' && agency.fields.Description != undefined && agency.fields.Description != null) {
 					enforcementItem.find('.laws-description').html(converter.makeHtml(agency.fields.Description));
