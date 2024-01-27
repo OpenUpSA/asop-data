@@ -203,11 +203,6 @@ const countries = [
 		"location": "Rwanda"
 	},
 	{
-		"iso_code": "SHN",
-		"iso2": "SH",
-		"location": "Saint Helena"
-	},
-	{
 		"iso_code": "STP",
 		"iso2": "ST",
 		"location": "Sao Tome and Principe"
@@ -391,17 +386,14 @@ $(document).ready(function () {
 				enforcementAgencies: results[3]
 			};
 
+			console.log(data);
+
 			$('.laws-country-info').prepend('<img class="country-flag" alt="' + countryName + '" src="http://purecatamphetamine.github.io/country-flag-icons/3x2/' + iso2 + '.svg"/>');
 
 			$('.laws-country-info h2').text(countryName);
 
 			$('.laws-country-laws').removeClass('hidden_item');
-
-			if (data.descriptions.data.records[0].fields.Introduction != '' && data.descriptions.data.records[0].fields.Introduction != undefined && data.descriptions.data.records[0].fields.Introduction != null) {
-				$('.laws-country-info p').text('');
-			} else {
-				$('.laws-country-info p').text('');
-			}
+			
 
 			if (data.descriptions.data.records[0].fields.Laws != '' && data.descriptions.data.records[0].fields.Laws != undefined && data.descriptions.data.records[0].fields.Laws != null) {
 				$('.laws').append('<div class="section-intro-par">' + converter.makeHtml(data.descriptions.data.records[0].fields.Laws) + '</div>');
