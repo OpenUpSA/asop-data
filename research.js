@@ -310,7 +310,7 @@ function fetchRecords() {
 			total = data.data.total;
 			pageNum = data.data.pageNum;
 			pageSize = data.data.pageSize;
-			pages = Math.ceil(total / pageSize);
+			pages = Math.ceil(total / 20);
 
 			renderRecords(records);
 
