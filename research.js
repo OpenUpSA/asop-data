@@ -501,9 +501,7 @@ function resetPageNum() {
 }
 
 $(document).ready(() => {
-
 	
-	document.getElementsByTagName('head')[0].appendChild(style);
 
 	fetchRelations();
 
