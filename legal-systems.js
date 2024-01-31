@@ -299,13 +299,13 @@ $(document).ready(function () {
 		.section-intro-par {
 			margin: 1em 0 2em 0;
    			font-size: 1.1em;
-      			text-align: justify;
+      			
 		}
 
   		.section-intro-par li {
     			margin: 1em 0;
        			color: #666;
-	  		text-align: justify;
+	  		
       		}
 
 		.laws-country-laws * {
