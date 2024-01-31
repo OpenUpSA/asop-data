@@ -298,8 +298,6 @@ $(document).ready(function () {
 
 		.section-intro-par {
 			margin: 1em 0 2em 0;
-   			font-size: 1.1em;
-      			
 		}
 
   		.section-intro-par li {
@@ -309,8 +307,8 @@ $(document).ready(function () {
       		}
 
 		.laws-country-laws * {
-  			font-size: 1.1em;
-     			line-height: 1.6em;
+  			font-size: 1rem;
+     			line-height: 1.2em;
 		}
   
  	`;
