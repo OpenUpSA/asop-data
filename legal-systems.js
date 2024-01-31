@@ -308,7 +308,7 @@ $(document).ready(function () {
 
 		.laws-country-laws * {
   			font-size: 1rem;
-     			line-height: 1.2em;
+     			line-height: 1.5em;
 		}
   
  	`;
