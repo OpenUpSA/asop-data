@@ -353,6 +353,8 @@ $(document).ready(function () {
 
 	if (country != '' && country != null) {
 
+		$('.loading').removeClass('hidden');
+
 		let countryName = countries.find(c => c.iso_code === country)?.location;
 		let iso2 = countries.find(c => c.iso_code === country)?.iso2;
 
@@ -387,6 +389,9 @@ $(document).ready(function () {
 		});
 
 		Promise.all(promises).then(results => {
+
+			$('.loading').addClass('hidden');
+			
 			let [laws, descriptions, internationalAgreements, enforcementAgencies] = results;
 
 			let data = {
@@ -396,7 +401,6 @@ $(document).ready(function () {
 				enforcementAgencies: results[3]
 			};
 
-			console.log(data);
 
 			$('.laws-country-info').prepend('<img class="country-flag" alt="' + countryName + '" src="http://purecatamphetamine.github.io/country-flag-icons/3x2/' + iso2 + '.svg"/>');
 
