@@ -307,6 +307,12 @@ $(document).ready(function () {
        			color: #666;
 	  		text-align: justify;
       		}
+
+		.laws-country-laws * {
+  			font-size: 1.1em;
+     			line-height: 1.6em;
+		}
+  
  	`;
 
 
