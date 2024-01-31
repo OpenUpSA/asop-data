@@ -316,7 +316,7 @@ $(document).ready(function () {
 
 	document.getElementsByTagName('head')[0].appendChild(style);
 
-	$('.country-select-wrapper').append('<select class="country-select"><option>Select A Country</option></select>');
+	$('.country-select-wrapper').append('<select class="country-select"><option value="">Select A Country</option></select>');
 
 	let searchTerms = document.location.search.split('&');
 
@@ -335,13 +335,19 @@ $(document).ready(function () {
 
 	$('.country-select-wrapper').on('change', '.country-select', function () {
 
+		
+
 		const selectedCountry = $(this).val();
 
 		const url = new URL(window.location);
 
-		url.searchParams.set('country', selectedCountry);
+		if(selectedCountry != '') {
 
-		window.location.href = url.href;
+			url.searchParams.set('country', selectedCountry);
+
+			window.location.href = url.href;
+
+		}
 
 	});
 
