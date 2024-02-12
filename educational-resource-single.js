@@ -86,8 +86,13 @@ fetch(aitable + educationalResourcesTable + queryString, {
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-		gtag('config', 'G-X27M49QM3J'); 
-		gtag('config', 'G-R222ZH8E0D');
+		gtag('config', 'G-X27M49QM3J',{
+			'page_title': document.title
+		}); 
+		
+		gtag('config', 'G-R222ZH8E0D',{
+			'page_title': document.title
+		});
 
 		
 		$('.rl-text-style-medium').text(record.fields.Description);
