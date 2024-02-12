@@ -72,7 +72,7 @@ fetch(aitable + educationalResourcesTable + queryString, {
 		}
 
 		$('h1').text(record.fields.Title);
-		$(document).title = record.fields.Title;
+		$('title').text(record.fields.Title);
 		$('.rl-text-style-medium').text(record.fields.Description);
 		$('.rl-button-small').attr('href', record.fields.Link);
 		$('.research-access').text(record.fields.Access);
