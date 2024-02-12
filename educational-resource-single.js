@@ -73,12 +73,23 @@ fetch(aitable + educationalResourcesTable + queryString, {
 
 		$('h1').text(record.fields.Title);
 		$('title').text(record.fields.Title);
-		gtag('config', 'G-X27M49QM3J', {
-  			'page_title': document.title
-		});
-		gtag('config', 'G-R222ZH8E0D', {
-  			'page_title': document.title
-		});
+
+		// Create script tag
+		let script = document.createElement('script');
+		script.async = true; 
+		script.src = "https://www.googletagmanager.com/gtag/js?id=G-X27M49QM3J";
+		
+		// Append to head
+		document.head.appendChild(script);
+		
+		// Initialization snippet
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-X27M49QM3J'); 
+		gtag('config', 'G-R222ZH8E0D');
+
+		
 		$('.rl-text-style-medium').text(record.fields.Description);
 		$('.rl-button-small').attr('href', record.fields.Link);
 		$('.research-access').text(record.fields.Access);
