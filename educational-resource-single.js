@@ -73,6 +73,12 @@ fetch(aitable + educationalResourcesTable + queryString, {
 
 		$('h1').text(record.fields.Title);
 		$('title').text(record.fields.Title);
+		gtag('config', 'G-X27M49QM3J', {
+  			'page_title': document.title
+		});
+		gtag('config', 'G-R222ZH8E0D', {
+  			'page_title': document.title
+		});
 		$('.rl-text-style-medium').text(record.fields.Description);
 		$('.rl-button-small').attr('href', record.fields.Link);
 		$('.research-access').text(record.fields.Access);
